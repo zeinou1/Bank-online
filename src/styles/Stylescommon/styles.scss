@@ -1,2 +1,43 @@
+//Générale
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Sen&display=swap');
+:root {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;flex-direction: column;
+
+}
+img {
+  object-fit: cover;
+   width: 100%;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 150px);
+}
+
+//variables
+@import "/src/styles/variables/variables";
 //fichiers internes
 @import "../modules/header";
+@import "../modules/home";
+@import "../modules/SingIn";
+@import "../modules/user";
