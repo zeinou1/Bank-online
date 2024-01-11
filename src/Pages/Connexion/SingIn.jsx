@@ -1,4 +1,4 @@
-import "./../../styles/Stylescommon/styles.scss"
+
 
 function AuthForm() {
 
