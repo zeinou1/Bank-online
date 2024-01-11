@@ -1,7 +1,6 @@
 
 import logo from "./../../assets/Logo.png"
 import {Link} from 'react-router-dom'
-import "../../styles/Stylescommon/styles.scss"
 function Navigation() {
     return (
         <nav className="main-nav">
