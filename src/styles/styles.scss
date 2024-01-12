@@ -35,18 +35,15 @@ main {
 }
 
 //variables
-<<<<<<< HEAD
-@import "/src/styles/variables/variables";
-//fichiers internes
-@import "./modules/header";
-@import "./modules/home";
-@import "./modules/SingIn";
-@import "./modules/user";
-=======
 
+.text-danger{
+  color: #ff0000;
+}
 //fichiers internes
 @import "modules/header";
 @import "modules/home";
 @import "modules/SingIn";
 @import "modules/user";
->>>>>>> Phase-1
+@import "modules/Edit_profile";
+
+

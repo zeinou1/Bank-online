@@ -1,12 +1,25 @@
+import { useDispatch, useSelector } from "react-redux";
+import { Edit_profile } from "./Profile/Edit_profile";
+import Profile from "./Profile/Profile";
+import { useState } from "react";
+
 
 
 function User(props) {
+    const dispatch = useDispatch()
+    const profile = useSelector((state)=> state.profile)
+   
     return (
 
         <main className="main bg-dark">
             <div className="header">
-                <h1>Welcome back<br/>Tony Jarvis!</h1>
-                <button className="edit-button">Edit Name</button>
+                <h1>Welcome back<br/>
+                 < Profile/>
+                {profile.firstName}  {profile.lastName}
+                
+                </h1>
+                    <Edit_profile /> 
+                     
             </div>
             <h2 className="sr-only">Accounts</h2>
             <section className="account">
