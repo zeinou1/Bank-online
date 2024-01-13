@@ -1,7 +1,6 @@
 // cSpell:words reduxjs
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { services } from '../App/services';
 
 //api
 export const loginUser = createAsyncThunk(
@@ -12,15 +11,12 @@ export const loginUser = createAsyncThunk(
                 const data = response.data;
                 const token = data.body.token;
                 localStorage.setItem('user', JSON.stringify(token));
-
                 return data;
-                //services.GetToken(data.body.token)
             } catch (error) {
                 throw new Error(error.message);
             }
         }
 );
-
 
 const userSlice = createSlice({
     name: 'user',
@@ -28,20 +24,17 @@ const userSlice = createSlice({
         loading: false,
         user: null,
         error:null,
-        token: ""
+        token: "",
+        connected: false,
     },
-    // reducers: {
-    //     logout: (state) => {
-    //         localStorage.removeItem('user');
-    //         state.user = null;
-    //     },
-    //     userAuth : {
-    //         reducer(state, action) {
-    //             state.user = action.payload;
-    //         },
-    //     }
+    reducers: {
+        logout: (state) => {
+            state.connected = false;
+            state.user = null;
+            state.token = "";
+        },
 
-    // },
+    },
     extraReducers:(builder)=> {
         builder
         builder.addCase(loginUser.pending, (state) => {
@@ -54,6 +47,7 @@ const userSlice = createSlice({
             state.user = payload;
             state.token = payload.body.token;
             state.error = null;
+            state.connected = true;
         })
         builder.addCase(loginUser.rejected, (state, action) => {
             state.loading = false;
@@ -68,5 +62,5 @@ const userSlice = createSlice({
     }
 })
 
-
+export const { logout } = userSlice.actions;
 export default userSlice.reducer;

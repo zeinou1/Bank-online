@@ -46,23 +46,39 @@ const profileSlice = createSlice({
         firstName: "",
         lastName: "",
         id: "",
-        userName : ""
+        userName : "",
+      
+    },
+    reducers: {
+            initialProfile: (state) => {
+            state.email = "";
+            state.firstName = "";
+            state.lastName = "";
+            state.id = "";
+            state.userName = "";
+        },
     },
     extraReducers: (builder) => {
         builder
-        builder.addCase(UserData.fulfilled, (state, { payload }) => {
-            state.email =  payload.email;
-            state.firstName = payload.firstName;
-            state.lastName = payload.lastName;
-            state.userName = payload.userName;
-            state.id = payload.id;
+        builder
+        .addCase(UserData.fulfilled, (state, { payload }) => {
+            if (payload) {
+                state.email = payload.email;
+                state.firstName = payload.firstName;
+                state.lastName = payload.lastName;
+                state.userName = payload.userName;
+                state.id = payload.id;
+            }
         })
-        builder.addCase(updateProfile.fulfilled, (state, { payload }) => {
-            state.userName  = payload.userName 
+        builder
+        .addCase(updateProfile.fulfilled, (state, { payload }) => {
+            if(payload){
+                state.userName = payload.userName;
+            }
         })
     },
 });
 
 
-
+export const { LogoutProfile } = profileSlice.actions;
 export default profileSlice.reducer;

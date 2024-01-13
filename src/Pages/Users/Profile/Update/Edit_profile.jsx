@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { updateProfile } from "../../../features/profileSlice";
+import { updateProfile } from "../../../../features/profileSlice";
 
 export const Edit_profile = () => {
   const profile = useSelector((state) => state.profile);
@@ -68,7 +68,7 @@ export const Edit_profile = () => {
             />
           </div>
           <div className="Edit_btn">
-            <button className="btn" type="submit" onClick={()=> setEditBtn(true)}>
+            <button className="btn" type="submit" onClick={() => setEditBtn(true)}>
               Save
             </button>
             <button className="btn" onClick={() => setEditBtn(true)}>
