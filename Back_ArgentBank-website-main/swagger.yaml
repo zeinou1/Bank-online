@@ -179,7 +179,7 @@ paths:
     # Post Account transactions
   #     # Update transactions Category
   /transactions/{user_id}/{account_id}/{transactions_id}/category/{category_id}:
-    put:
+    patch:
       security:
         - Bearer: []
       tags:
@@ -220,7 +220,7 @@ paths:
           description: Internal Server Error
     # Update transactions Notes
   /transactions/{user_id}/{account_id}/{transactions_id}/notes/{notes_id}:
-    put:
+    patch:
       security:
         - Bearer: []
       tags:
