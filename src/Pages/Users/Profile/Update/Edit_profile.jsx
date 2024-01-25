@@ -25,7 +25,7 @@ export const Edit_profile = () => {
           Edit user info
         </button>
       ) : (
-        <form action="" className="Edit_form" >
+        <form className="Edit_form" onSubmit={handleEdit}>
           <div className="Edit_div">
             <label htmlFor="name" className="label">
               User_name:
@@ -68,7 +68,7 @@ export const Edit_profile = () => {
             />
           </div>
           <div className="Edit_btn">
-            <button className="btn" type="submit" onClick={() => setEditBtn(true)} >
+            <button className="btn" onClick={() => setEditBtn(false)}>
               Save
             </button>
             <button className="btn" onClick={() => setEditBtn(true)}>
