@@ -4,24 +4,14 @@ import Index from "./Pages/Home/Index.jsx";
 import Footer from "./Components/Common/footer.jsx";
 import SingIn from "./Pages/Connexion/SingIn.jsx";
 import User from "./Pages/Users/User.jsx";
-<<<<<<< HEAD
-import UserTest from "./Pages/Users/user1.jsx";
+import ProtectedUser from "./Pages/Users/Userprotected/ProtectedUser.jsx";
+
+
 
 
 function App() {
   return (
     <>
-        <BrowserRouter>
-            <Navigation/>
-            <Routes>
-              <Route path='/ff' element={<Index/>} />
-                <Route path='/SingIn' element={<SingIn/>} />
-                <Route path="/gf" element={<User/>} />
-                <Route path="/" element={<UserTest/>} />
-            </Routes>
-            <Footer></Footer>
-        </BrowserRouter>
-=======
       <BrowserRouter>
         <Navigation />
         <Routes>
@@ -38,7 +28,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
->>>>>>> Phase-Test
+
     </>
   );
 }
