@@ -35,9 +35,15 @@ main {
 }
 
 //variables
-@import "/src/styles/variables/variables";
+
+.text-danger{
+  color: #ff0000;
+}
 //fichiers internes
-@import "../modules/header";
-@import "../modules/home";
-@import "../modules/SingIn";
-@import "../modules/user";
+@import "modules/header";
+@import "modules/home";
+@import "modules/SingIn";
+@import "modules/user";
+@import "modules/Edit_profile";
+
+

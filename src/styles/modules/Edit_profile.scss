@@ -1,0 +1,58 @@
+// edit profile
+.Edit{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.Edit_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 0 auto;
+};
+.Edit_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  
+  width: 224px;
+}
+.label{
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.4rem;
+  color: black;
+}
+.input{
+  width: 7rem;
+  height: 1.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+}
+.input_{
+  width: 7rem;
+  height: 1.5rem;
+  background-color: rgba(114, 113, 113,.4);
+  border-radius: 0.4rem;
+  border: 1px solid black;
+ 
+}
+.Edit_btn{
+  width: 100%;
+}
+.btn{
+  width: 7rem;
+  height: 2rem;
+  background-color: #00bc77;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+}

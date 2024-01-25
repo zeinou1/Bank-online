@@ -2,7 +2,7 @@
 import chat_icon from "./../../assets/icon_chat.png"
 import money_icon from "./../../assets/icon_money.png"
 import security_icon from "./../../assets/icon_security.png"
-import "./../../styles/Stylescommon/styles.scss"
+
 
 function Index() {
     return (
