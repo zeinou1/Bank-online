@@ -7,14 +7,10 @@ import User from "./Pages/Users/User.jsx";
 <<<<<<< HEAD
 import UserTest from "./Pages/Users/user1.jsx";
 
-=======
-import ProtectedUser from "./Pages/Users/Userprotected/ProtectedUser.jsx";
->>>>>>> Phase-Test
 
 function App() {
   return (
     <>
-<<<<<<< HEAD
         <BrowserRouter>
             <Navigation/>
             <Routes>

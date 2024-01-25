@@ -17,11 +17,7 @@
     "react-dom": "^18.2.0",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
-<<<<<<< HEAD
     "redux-logger": "^3.0.6"
-=======
-    "yaml-lint": "^1.7.0"
->>>>>>> Phase-Test
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
