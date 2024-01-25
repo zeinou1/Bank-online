@@ -31,7 +31,7 @@ function Navigation() {
 
       {/* // display user */}
       {connected && (
-        <Link className="main-nav-item" to="/Profile">
+        <Link className="main-nav-item" to="/User">
           <i className="fa fa-user-circle"></i>
           {profile.firstName}
         </Link>

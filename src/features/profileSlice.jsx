@@ -1,6 +1,4 @@
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-
-import axios from "axios";
 //Post profile
 export const UserData = createAsyncThunk(
     'profile/DataUser',
@@ -11,9 +9,13 @@ export const UserData = createAsyncThunk(
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             }
-        });
+          
+        }
+        );
         const data = await response.json();
         return data.body;
+      
+      
     }
 );
 
@@ -32,7 +34,7 @@ export const updateProfile = createAsyncThunk(
     });
   
     if (!response.ok) {
-      throw new Error('Something went wrong!');
+      throw new Error('Une erreur est survenue');
     }
     return response.json();
   });
@@ -82,3 +84,27 @@ const profileSlice = createSlice({
 
 export const { LogoutProfile } = profileSlice.actions;
 export default profileSlice.reducer;
+
+
+// export const UserData = createAsyncThunk(
+//     'profile/DataUser',
+//     async (token) => {
+//         try {
+//             const response = await fetch('http://localhost:3001/api/v1/user/profile', {
+//                 method: 'POST',
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                     'Authorization': `Bearer ${token}`
+//                 }
+//             });
+//             if (!response.ok) {
+//                 throw new Error('Recuperation du profile impossible');
+//             }
+//             const data = await response.json();
+//             return data.body;
+//         } catch (error) {
+//             console.error(error);
+//             throw error;
+//         }
+//     }
+// );
