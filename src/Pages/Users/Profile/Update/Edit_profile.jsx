@@ -16,23 +16,24 @@ export const Edit_profile = () => {
   const handleEdit = (e) => {
     e.preventDefault();
     dispatch(updateProfile({ UserName, token }));
+    setUserName('')
   };
 
   return (
     <div className="Edit">
-      {btnEdit ? (
+      { btnEdit ? (
         <button className="edit-button" onClick={() => setEditBtn(false)}>
           Edit user info
         </button>
       ) : (
-        <form action="" className="Edit_form" onSubmit={handleEdit}>
+        <form className="Edit_form" onSubmit={handleEdit}>
           <div className="Edit_div">
-            <label htmlFor="" className="label">
+            <label htmlFor="name" className="label">
               User_name:
             </label>
             <input
               type="text"
-              name=""
+              name="name"
               id=""
               className="input"
               value={UserName}
@@ -68,10 +69,10 @@ export const Edit_profile = () => {
             />
           </div>
           <div className="Edit_btn">
-            <button className="btn" type="submit" onClick={() => setEditBtn(true)}>
+            <button className="btn" onClick={() => setEditBtn(false)} >
               Save
             </button>
-            <button className="btn" onClick={() => setEditBtn(true)}>
+            <button className="btn" onClick={(e) => { e.preventDefault(); setEditBtn(true); }}>
               Cancel
             </button>
           </div>

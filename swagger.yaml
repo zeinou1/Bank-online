@@ -103,7 +103,7 @@ paths:
           description: Internal Server Error
         # TransactionsModules
         # Get Account transactions
-  /transactions/{user_id}/{account_id}:
+  /users/{userId}/transactions:
     get:
       security:
         - Bearer: []
@@ -139,8 +139,8 @@ paths:
         "500":
           description: Internal Server Error
 
-    # Get show Account transactions id
-  /transactions/{user_id}/{account_id}/{transactions_id}:
+    # Get show Account transactions
+  /transactions/{transactionsId}:
     get:
       security:
         - Bearer: []
@@ -176,9 +176,9 @@ paths:
         "500":
           description: Internal Server Error
 
-    # Post Account transactions
+  # Post Account transactions
   #     # Update transactions Category
-  /transactions/{user_id}/{account_id}/{transactions_id}/category/{category_id}:
+  /transactions/{transactionsId}/category:
     patch:
       security:
         - Bearer: []
@@ -219,8 +219,8 @@ paths:
         "500":
           description: Internal Server Error
     # Update transactions Notes
-  /transactions/{user_id}/{account_id}/{transactions_id}/notes/{notes_id}:
-    patch:
+  /transactions/{transactionsId}/notes:
+    put:
       security:
         - Bearer: []
       tags:

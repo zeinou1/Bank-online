@@ -52,11 +52,10 @@ const userSlice = createSlice({
         builder.addCase(loginUser.rejected, (state, action) => {
             state.loading = false;
             state.user = null;
-            console.log(action.error.message)
             if(action.error.message === 'Request failed with status code 400'){
-                state.error = 'email ou password invalid'
+                state.error = 'Email ou password invalid';
             }else {
-                state.error = action.error.message;
+               state.error = action.error.message;
             }
         })
     }

@@ -10,16 +10,24 @@ function Navigation() {
   const { connected } = useSelector((state) => state.user);
   const {initialProfile } = useSelector((state) => state.profile);
   // deconnexion
+
   const handLogout = () => {
     dispatch(logout());
-    dispatch(initialProfile());
+    dispatch(initialProfile()); 
   };
+  
   return (
     <nav className="main-nav">
-      <Link className="main-nav-logo">
+      {
+        connected ?   <Link className="main-nav-logo">
+        <img className="main-nav-logo-image" src={logo} alt="Argent Bank Logo" />
+        <h1 className="sr-only">Argent Bank</h1>
+      </Link> :
+        <Link className="main-nav-logo" to="/">
         <img className="main-nav-logo-image" src={logo} alt="Argent Bank Logo" />
         <h1 className="sr-only">Argent Bank</h1>
       </Link>
+      }
       <div>
       {/* // no display login if not connected */}
       {connected ? null : (
@@ -33,7 +41,7 @@ function Navigation() {
       {connected && (
         <Link className="main-nav-item" to="/User">
           <i className="fa fa-user-circle"></i>
-          {profile.firstName}
+          {profile.userName}
         </Link>
       )}
       {connected && (

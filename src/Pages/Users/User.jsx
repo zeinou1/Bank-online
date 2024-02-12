@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Edit_profile } from "./Profile/Update/Edit_profile";
 import Profile from "./Profile/Profile";
-import { useState } from "react";
 
 function User(props) {
   const dispatch = useDispatch();
@@ -16,7 +15,7 @@ function User(props) {
           <Profile />
           {profile.firstName} {profile.lastName}
         </h1>
-        <Edit_profile />
+        <Edit_profile/>
       </div>
       <h2 className="sr-only">Accounts</h2>
       <section className="account">
