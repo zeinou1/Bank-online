@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { updateProfile } from "../../../../features/profileSlice";
+import { updateProfile } from "../../../../features/profileSlice.jsx";
 
 export const Edit_profile = () => {
   const profile = useSelector((state) => state.profile);

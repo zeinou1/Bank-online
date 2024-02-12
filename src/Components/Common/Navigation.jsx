@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import logo from "./../../assets/Logo.png";
 import { Link, useNavigate } from "react-router-dom";
-import { logout } from "../../features/LoginSlice";
+import { logout } from "../features/LoginSlice";
 
 function Navigation() {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Edit_profile } from "./Profile/Update/Edit_profile";
-import Profile from "./Profile/Profile";
+import { Edit_profile } from "./Profile/Update/Edit_profile.jsx";
+import Profile from "./Profile/Profile.jsx";
 
 function User(props) {
   const dispatch = useDispatch();
