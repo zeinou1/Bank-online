@@ -16,6 +16,7 @@ export const Edit_profile = () => {
   const handleEdit = (e) => {
     e.preventDefault();
     dispatch(updateProfile({ UserName, token }));
+    setUserName('')
   };
 
   return (
@@ -68,10 +69,10 @@ export const Edit_profile = () => {
             />
           </div>
           <div className="Edit_btn">
-            <button className="btn" onClick={() => setEditBtn(false)}>
+            <button className="btn" onClick={() => setEditBtn(false)} >
               Save
             </button>
-            <button className="btn" onClick={() => setEditBtn(true)}>
+            <button className="btn" onClick={(e) => { e.preventDefault(); setEditBtn(true); }}>
               Cancel
             </button>
           </div>

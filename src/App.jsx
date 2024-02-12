@@ -5,6 +5,8 @@ import Footer from "./Components/Common/footer.jsx";
 import SingIn from "./Pages/Connexion/SingIn.jsx";
 import User from "./Pages/Users/User.jsx";
 import ProtectedUser from "./Pages/Users/Userprotected/ProtectedUser.jsx";
+import NotFound from "./Pages/404/NotFound.jsx";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
               </ProtectedUser>
             }
           />
+        <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

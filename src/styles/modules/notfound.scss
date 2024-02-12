@@ -1,0 +1,56 @@
+.notfound {
+  background: rgb(57, 9, 18);
+  min-width: 325px;
+  div > h1 {
+    color: white;
+    font-size: 17rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    margin-bottom: 5rem;
+    background: rgb(51, 66, 51);
+    box-shadow: 4px 4px 46px rgba(232, 188, 188, 0.3);
+    border: 3px dashed rgb(126, 82, 82);
+    /* Tablette */
+    @media (max-width: 800px) {
+       font-size: 10rem;
+    }
+    //   mobile
+    @media (max-width: 570px) {
+        font-size: 5rem;
+        margin-bottom: 9rem;
+    }
+  }
+  button {
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: 2px solid green;
+    background: rgb(222, 173, 173);
+    color: white;
+    text-align: center;
+   
+    padding: 1rem;
+    box-shadow: 1px 4px 56px rgba(249, 249, 246, 0.7);
+    cursor: pointer;
+    transition: 0.3s ease;
+    /* Tablette */
+    @media (max-width: 800px) {
+    }
+    //   mobile
+    @media (max-width: 570px) {
+        font-size: 1.5rem;
+    }
+    &:hover {
+      font-size: 4rem;
+      transition: 0.5s ease;
+      /* Tablette */
+      @media (max-width: 800px) {
+        font-size: inherit;
+      }
+      //   mobile
+      @media (max-width: 570px) {
+        font-size: initial;
+       
+      }
+    }
+  }
+}
